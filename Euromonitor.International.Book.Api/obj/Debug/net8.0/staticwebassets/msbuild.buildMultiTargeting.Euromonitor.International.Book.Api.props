@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Euromonitor.International.Book.Api.props" />
+</Project>

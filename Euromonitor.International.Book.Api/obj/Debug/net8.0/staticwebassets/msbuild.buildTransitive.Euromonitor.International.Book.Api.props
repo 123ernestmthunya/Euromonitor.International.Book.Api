@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Euromonitor.International.Book.Api.props" />
+</Project>
