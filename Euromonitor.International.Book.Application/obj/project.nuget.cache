@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bhis/0IgRf0=",
+  "success": true,
+  "projectFilePath": "/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/Euromonitor.International.Book.Application.csproj",
+  "expectedPackageFiles": [
+    "/home/ernestmthunya/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0/microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

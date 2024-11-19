@@ -32,3 +32,8 @@
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.pdb
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.genruntimeconfig.cache
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/ref/Euromonitor.International.Book.Api.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Application.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Core.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Application.pdb
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Core.pdb

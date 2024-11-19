@@ -1,0 +1,16 @@
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/bin/Debug/net8.0/Euromonitor.International.Book.Application.deps.json
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/bin/Debug/net8.0/Euromonitor.International.Book.Application.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/bin/Debug/net8.0/Euromonitor.International.Book.Application.pdb
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/bin/Debug/net8.0/Euromonitor.International.Book.Core.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/bin/Debug/net8.0/Euromonitor.International.Book.Core.pdb
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.csproj.AssemblyReference.cache
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.AssemblyInfoInputs.cache
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.AssemblyInfo.cs
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.csproj.CoreCompileInputs.cache
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.sourcelink.json
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromoni.EE604D3A.Up2Date
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/refint/Euromonitor.International.Book.Application.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/Euromonitor.International.Book.Application.pdb
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Application/obj/Debug/net8.0/ref/Euromonitor.International.Book.Application.dll
