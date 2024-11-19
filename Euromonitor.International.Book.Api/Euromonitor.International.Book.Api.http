@@ -1,0 +1,6 @@
+@Euromonitor.International.Book.Api_HostAddress = http://localhost:5029
+
+GET {{Euromonitor.International.Book.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
