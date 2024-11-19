@@ -1,4 +1,5 @@
 using Euromonitor.International.Book.Application;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddBookServices();
 
+builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAngularApp", builder =>
+        {
+            builder.WithOrigins("http://localhost:4200") // Angular development server
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+    });
+
+// Add DbContext using InMemoryDatabase 
+builder.Services.AddDbContext<Db>(options =>
+    options.UseInMemoryDatabase("InMemoryBooksDb"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAngularApp");
 
 // var summaries = new[]
 // {

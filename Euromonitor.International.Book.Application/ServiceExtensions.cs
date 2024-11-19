@@ -9,6 +9,7 @@ public static class ServiceExtensions
     {
        services.AddTransient<IUserService, UserService>();
        services.AddTransient<ISubscriptionService, SubscriptionService>();
+       services.AddTransient<IBookService, BookService>();
        return services;   
    }   
 }
