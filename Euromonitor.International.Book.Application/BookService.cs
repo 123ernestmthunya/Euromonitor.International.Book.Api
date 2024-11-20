@@ -1,4 +1,5 @@
 
+using Euromonitor.International.Book.Core;
 using Microsoft.EntityFrameworkCore;
 
 namespace Euromonitor.International.Book.Application;
@@ -11,11 +12,11 @@ public class BookService : IBookService
     {
         _dbContext = dbContext;
     }
-    public async Task<List<Euromonitor.International.Book.Core.Book>>  GetBooks()
+    public async Task<List<BookEntity>>  GetBooks()
     {
         if (!_dbContext.Books.Any())
         {
-            await _dbContext.Books.AddRangeAsync(Helper.GetDummyBooks());
+            await _dbContext.Books.AddRangeAsync(Helper.BookEntitySeed());
             await _dbContext.SaveChangesAsync();
         }
 

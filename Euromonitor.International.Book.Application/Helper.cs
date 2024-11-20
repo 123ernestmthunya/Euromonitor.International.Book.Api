@@ -1,3 +1,5 @@
+using Euromonitor.International.Book.Core;
+
 namespace Euromonitor.International.Book.Application;
 
 public static class Helper
@@ -18,14 +20,25 @@ public static class Helper
                 return computedHash.SequenceEqual(storedHash);
             }
         }
-    public static List<Euromonitor.International.Book.Core.Book> GetDummyBooks()
+    public static List<BookEntity> BookEntitySeed()
     {
-        return new List<Euromonitor.International.Book.Core.Book>
+        return new List<BookEntity>
         {
-            new Core.Book(1, "The Great Gatsby", "A classic novel by F. Scott Fitzgerald", 10.99M, "greatgatsby.jpg", 100),
-            new Core.Book(2, "1984", "A dystopian novel by George Orwell", 8.99M, "1984.jpg", 150),
-            new Core.Book(3, "To Kill a Mockingbird", "A novel by Harper Lee about racial injustice", 12.99M, "mockingbird.jpg", 200),
-            new Core.Book(4, "Pride and Prejudice", "A romantic novel by Jane Austen", 9.99M, "prideandprejudice.jpg", 120)
+            new BookEntity {
+                BookEntityID = 1,
+                Name = "The Great Gatsby",
+                Description = "A classic novel by F. Scott Fitzgerald",
+                Price = 10.99M,
+                imagePath = "greatgatsby.jpg",
+            },
+            new BookEntity {
+                BookEntityID = 2,
+                Name = "The Great Gatsby",
+                Description = "A classic novel by F. Scott Fitzgerald",
+                Price = 10.99M,
+                imagePath = "greatgatsby.jpg",
+            }
         };
+
     }
 }

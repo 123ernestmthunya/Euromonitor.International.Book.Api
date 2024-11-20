@@ -9,7 +9,7 @@ namespace Euromonitor.International.Book.Application
 {
     public interface IUserService
     {
-         Task<RegisterEntity> RegisterUserAsync(Euromonitor.International.Book.Core.RegisterRequest user);
-         Task<bool> LoginUserAsync(Euromonitor.International.Book.Core.LoginRequest request);
+         Task<Response<RegisterEntity>> RegisterUserAsync(Euromonitor.International.Book.Core.RegisterRequest user);
+         Task<Response<RegisterEntity>>  LoginUserAsync(Euromonitor.International.Book.Core.LoginRequest request);
     }
 }

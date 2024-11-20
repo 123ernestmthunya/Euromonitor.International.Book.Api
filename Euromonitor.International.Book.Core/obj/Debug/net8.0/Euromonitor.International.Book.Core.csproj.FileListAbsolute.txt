@@ -1,11 +1,11 @@
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/bin/Debug/net8.0/Euromonitor.International.Book.Core.deps.json
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/bin/Debug/net8.0/Euromonitor.International.Book.Core.dll
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/bin/Debug/net8.0/Euromonitor.International.Book.Core.pdb
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/Euromonitor.International.Book.Core.GeneratedMSBuildEditorConfig.editorconfig
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/Euromonitor.International.Book.Core.AssemblyInfoInputs.cache
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/Euromonitor.International.Book.Core.AssemblyInfo.cs
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/Euromonitor.International.Book.Core.csproj.CoreCompileInputs.cache
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/Euromonitor.International.Book.Core.sourcelink.json
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/bin/Debug/net8.0/Euromonitor.International.Book.Core.deps.json
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/bin/Debug/net8.0/Euromonitor.International.Book.Core.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/bin/Debug/net8.0/Euromonitor.International.Book.Core.pdb
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/Euromonitor.International.Book.Core.dll
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/refint/Euromonitor.International.Book.Core.dll
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Core/obj/Debug/net8.0/Euromonitor.International.Book.Core.pdb

@@ -1,9 +1,12 @@
 
 
+using Euromonitor.International.Book.Core;
+
 namespace Euromonitor.International.Book.Application;
 
 public interface ISubscriptionService
 {
-    Task<bool> CreateSubscriptionAsync(int userId, int bookId);
-    Task<bool> CancelSubscriptionAsync(int subscriptionId);
+    Task<Response<bool>> CreateSubscriptionAsync(int userId, int bookId);
+    Task<Response<bool>> CancelSubscriptionAsync(int subscriptionId);
+    Task<Response<List<BookEntity>>> getSubscriptionAsync(int userId);
 } 

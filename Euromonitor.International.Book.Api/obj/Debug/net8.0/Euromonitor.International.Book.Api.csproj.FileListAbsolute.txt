@@ -1,11 +1,3 @@
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.csproj.AssemblyReference.cache
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.GeneratedMSBuildEditorConfig.editorconfig
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.AssemblyInfoInputs.cache
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.AssemblyInfo.cs
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.csproj.CoreCompileInputs.cache
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.MvcApplicationPartsAssemblyInfo.cs
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.MvcApplicationPartsAssemblyInfo.cache
-/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.sourcelink.json
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/appsettings.Development.json
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/appsettings.json
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Api
@@ -34,6 +26,14 @@
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Core.dll
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Application.pdb
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Euromonitor.International.Book.Core.pdb
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.csproj.AssemblyReference.cache
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.GeneratedMSBuildEditorConfig.editorconfig
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.AssemblyInfoInputs.cache
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.AssemblyInfo.cs
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.csproj.CoreCompileInputs.cache
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.MvcApplicationPartsAssemblyInfo.cs
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.MvcApplicationPartsAssemblyInfo.cache
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.sourcelink.json
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/staticwebassets.build.json
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/staticwebassets.development.json
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/staticwebassets/msbuild.Euromonitor.International.Book.Api.Microsoft.AspNetCore.StaticWebAssets.props

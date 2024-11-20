@@ -16,19 +16,19 @@ namespace Euromonitor.International.Book.Application
             _dbContext = dbContext;
         }
 
-        public async Task<bool> LoginUserAsync(LoginRequest request)
+        public async Task<Response<RegisterEntity>> LoginUserAsync(LoginRequest request)
         {
             var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Email == request.Email);
 
             if (user == null || !Helper.VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
             {
-                return false;
+                return new Response<RegisterEntity>(false, ApplicationConstants.LoginFailed, null);
             }
            
-            return true;
+             return new Response<RegisterEntity>(true, ApplicationConstants.LoginSuccessful, user);
         }
 
-        public async Task<RegisterEntity> RegisterUserAsync(RegisterRequest request)
+        public async Task<Response<RegisterEntity>> RegisterUserAsync(RegisterRequest request)
         {
             byte[] passwordHash, passwordSalt;
             Helper.CreatePasswordHash(request.Password, out passwordHash, out passwordSalt);
@@ -44,7 +44,7 @@ namespace Euromonitor.International.Book.Application
             await _dbContext.Users.AddAsync(user);
             await _dbContext.SaveChangesAsync();
             
-            return user;
+             return new Response<RegisterEntity>(true, ApplicationConstants.RegistrationSuccessful, user);
         }
     }
 }

@@ -8,4 +8,5 @@ public class RegisterEntity : User
     public int UserID { get; set; }
     public required byte[] PasswordHash { get; set; }
     public required byte[] PasswordSalt { get; set; }
+    public ICollection<SubscriptionEntity> Subscriptions { get; set; } = new List<SubscriptionEntity>();
 }
