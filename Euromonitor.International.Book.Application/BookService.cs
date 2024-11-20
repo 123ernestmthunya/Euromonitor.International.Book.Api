@@ -5,10 +5,9 @@ namespace Euromonitor.International.Book.Application;
 
 public class BookService : IBookService
 {
-
     private readonly Db _dbContext;
 
-     public BookService(Db dbContext)
+    public BookService(Db dbContext)
     {
         _dbContext = dbContext;
     }

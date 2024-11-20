@@ -1,3 +1,8 @@
 namespace Euromonitor.International.Book.Core;
 
-public record User(int UserID, string FirstName, string LastName, string Email, string Password);
+public class User
+{ 
+    public required string FirstName { get; set; }
+    public required string LastName { get; set; }
+    public required string Email { get; set; }
+}

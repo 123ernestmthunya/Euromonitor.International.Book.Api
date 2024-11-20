@@ -7,29 +7,31 @@ public static class EndpointsExtensions
 {
      public static WebApplication MapEndpoints(this WebApplication app)
      { 
-        // app.MapPost("/users/register", async (User user, IUserService userService) =>
-        // {
-        //     var createdUser = await userService.RegisterUserAsync(user);
+        app.MapPost("/users/register", async (RegisterRequest user, IUserService userService) =>
+        {
+            await userService.RegisterUserAsync(user);
 
-        // }).WithName("Register");
+        }).WithName("Register");
         
+        app.MapPost("/login", async (LoginRequest loginRequest, IUserService userService) =>
+        {
+         var isSuccess = await userService.LoginUserAsync(loginRequest);
 
-        // app.MapPost("/users/login", async (User request, IUserService userService) =>
-        // {
-        //     var user = await userService.LoginUserAsync(request.Email, request.Password);
-            
-        // }).WithName("Login");
+         if (isSuccess)
+         {
+            return Results.Ok("Login successful");
+         }
+         else
+         {
+            return Results.BadRequest("Invalid username or password");
+         }
+         }).WithName("Login");
 
         app.MapGet("/books", async (IBookService bookService) =>
         {
            var books = await bookService.GetBooks();
            return Results.Ok(books);
         });
-
-    //     app.MapDelete("/subscriptions/{subscriptionId}", async (int subscriptionId, ISubscriptionService subscriptionService) =>
-    //     {
-    //         await subscriptionService.CancelSubscriptionAsync(subscriptionId);
-    //     }).WithName("Subscription");;
 
        return app;
      }
