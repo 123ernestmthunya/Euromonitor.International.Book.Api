@@ -9,4 +9,6 @@ public static class ApplicationConstants
     public static string BooNotFound = "Book not found";
     public static string SubscibedSuccessful = "Subscribed successful";
     public static string SubscriptionNotFound = "Subscriptions not found";
+    public static string SubsciptionRetrievedSuccessful = "Subscriptions retrived successful";
+    public const string SubscriptionCancelled = "Subscription cancelled successfully.";
 }

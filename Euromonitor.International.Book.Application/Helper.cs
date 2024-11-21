@@ -29,14 +29,35 @@ public static class Helper
                 Name = "The Great Gatsby",
                 Description = "A classic novel by F. Scott Fitzgerald",
                 Price = 10.99M,
-                imagePath = "greatgatsby.jpg",
+                imagePath = "https://picsum.photos/200/300?grayscale",
             },
             new BookEntity {
                 BookEntityID = 2,
                 Name = "The Great Gatsby",
                 Description = "A classic novel by F. Scott Fitzgerald",
                 Price = 10.99M,
-                imagePath = "greatgatsby.jpg",
+                imagePath = "https://picsum.photos/200/300?grayscale",
+            },
+            new BookEntity {
+                BookEntityID = 3,
+                Name = "The Great Gatsby",
+                Description = "A classic novel by F. Scott Fitzgerald",
+                Price = 10.99M,
+                imagePath = "https://picsum.photos/200/300?grayscale",
+            },
+            new BookEntity {
+                BookEntityID = 4,
+                Name = "The Great Gatsby",
+                Description = "A classic novel by F. Scott Fitzgerald",
+                Price = 10.99M,
+                imagePath = "ghttps://picsum.photos/200/300?grayscale",
+            },
+            new BookEntity {
+                BookEntityID = 5,
+                Name = "The Great Gatsby",
+                Description = "A classic novel by F. Scott Fitzgerald",
+                Price = 10.99M,
+                imagePath = "https://picsum.photos/200/300?grayscale",
             }
         };
 

@@ -8,5 +8,5 @@ public interface ISubscriptionService
 {
     Task<Response<bool>> CreateSubscriptionAsync(int userId, int bookId);
     Task<Response<bool>> CancelSubscriptionAsync(int subscriptionId);
-    Task<Response<List<BookEntity>>> getSubscriptionAsync(int userId);
+    Task<Response<List<BookSubscriptionResponse>>> getSubscriptionAsync(int userId);
 } 

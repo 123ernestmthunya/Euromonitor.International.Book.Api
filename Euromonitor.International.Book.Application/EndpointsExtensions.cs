@@ -38,9 +38,18 @@ public static class EndpointsExtensions
         {
           var response = await subscribeService.getSubscriptionAsync(userId);
           return response.IsSuccess && response.Data.Count > 0
-                ? Results.Ok(new {Success = response.IsSuccess, subscriptions = response.Data}) 
+                ? Results.Ok(new {Success = response.IsSuccess, response.Data}) 
                 : Results.BadRequest(ApplicationConstants.SubscriptionNotFound);
         }).WithName("subscriptions");
+
+        app.MapDelete("/cancel-subscription/{subscriptionId}", async (int subscriptionId, ISubscriptionService subscribeService) =>
+        {
+            var response = await subscribeService.CancelSubscriptionAsync(subscriptionId);
+            return response.IsSuccess
+                ? Results.Ok(new { Success = response.IsSuccess, subscriptions = response.Data })
+                : Results.BadRequest(ApplicationConstants.SubscriptionNotFound);
+        }).WithName("cancel-subscription");
+
 
         app.MapGet("/books", async (IBookService bookService) =>
         {

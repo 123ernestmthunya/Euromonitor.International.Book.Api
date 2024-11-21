@@ -15,9 +15,19 @@ public class SubscriptionService : ISubscriptionService
         _dbContext = dbContext;
     }
 
-    public Task<Response<bool>> CancelSubscriptionAsync(int subscriptionId)
+    public async Task<Response<bool>> CancelSubscriptionAsync(int subscriptionId)
     {
-        throw new NotImplementedException();
+        var subscription = await _dbContext.Subscriptions.FirstOrDefaultAsync(s => s.SubscriptionID == subscriptionId);
+
+        if (subscription == null)
+        {
+            return new Response<bool>(false, ApplicationConstants.SubscriptionNotFound, false);
+        }
+
+        _dbContext.Subscriptions.Remove(subscription);
+        await _dbContext.SaveChangesAsync();
+
+        return new Response<bool>(true, ApplicationConstants.SubscriptionCancelled, true);
     }
 
     public async Task<Response<bool>> CreateSubscriptionAsync(int userId, int bookId)
@@ -51,14 +61,19 @@ public class SubscriptionService : ISubscriptionService
 
     }
 
-    public async Task<Response<List<BookEntity>>> getSubscriptionAsync(int userId)
+    public async Task<Response<List<BookSubscriptionResponse>>> getSubscriptionAsync(int userId)
     {
         var subscription = await _dbContext.Subscriptions
             .Where(s => s.UserID == userId)
-            .Select(s => s.Book)
+            .Select(s => new BookSubscriptionResponse{
+                 SubscriptionId = s.SubscriptionID,
+                 SubscriptionDate = s.StartDate,
+                 UnsubscriptionDate = s.EndDate,
+                 Book = s.Book
+             })
             .ToListAsync();
 
-         return new Response<List<BookEntity>>(true, ApplicationConstants.SubscibedSuccessful, subscription);
+         return new Response<List<BookSubscriptionResponse>>(true, ApplicationConstants.SubsciptionRetrievedSuccessful, subscription);
       
     }
 }
