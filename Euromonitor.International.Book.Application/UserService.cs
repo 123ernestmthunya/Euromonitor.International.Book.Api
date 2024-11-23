@@ -11,24 +11,34 @@ namespace Euromonitor.International.Book.Application
     {
         private readonly Db _dbContext;
 
-        public UserService(Db dbContext)
+        private readonly AuthService _authService;
+
+        public UserService(Db dbContext, AuthService authService)
         {
             _dbContext = dbContext;
+            _authService = authService;
         }
 
-        public async Task<Response<RegisterEntity>> LoginUserAsync(LoginRequest request)
+        public async Task<Response<LoginResponse>> LoginUserAsync(LoginRequest request)
         {
             var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Email == request.Email);
 
             if (user == null || !Helper.VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
             {
-                return new Response<RegisterEntity>(false, ApplicationConstants.LoginFailed, null);
+                return new Response<LoginResponse>(false, ApplicationConstants.LoginFailed, null);
             }
+
+            var token = _authService.GenerateJwtToken(user.FirstName);
+
+            var response = new LoginResponse {
+                Token = token,
+                Email = user.Email
+            };
            
-             return new Response<RegisterEntity>(true, ApplicationConstants.LoginSuccessful, user);
+             return new Response<LoginResponse>(true, ApplicationConstants.LoginSuccessful, response);
         }
 
-        public async Task<Response<RegisterEntity>> RegisterUserAsync(RegisterRequest request)
+        public async Task<Response<RegisterResponse>> RegisterUserAsync(RegisterRequest request)
         {
             byte[] passwordHash, passwordSalt;
             Helper.CreatePasswordHash(request.Password, out passwordHash, out passwordSalt);
@@ -43,8 +53,15 @@ namespace Euromonitor.International.Book.Application
 
             await _dbContext.Users.AddAsync(user);
             await _dbContext.SaveChangesAsync();
+
+            var response = new RegisterResponse {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserId = user.UserID,
+                Email = user.Email
+            };
             
-             return new Response<RegisterEntity>(true, ApplicationConstants.RegistrationSuccessful, user);
+            return new Response<RegisterResponse>(true, ApplicationConstants.RegistrationSuccessful, response);
         }
     }
 }

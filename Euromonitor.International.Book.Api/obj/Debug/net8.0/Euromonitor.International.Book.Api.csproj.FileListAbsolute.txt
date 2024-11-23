@@ -48,3 +48,11 @@
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.pdb
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/Euromonitor.International.Book.Api.genruntimeconfig.cache
 /home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/obj/Debug/net8.0/ref/Euromonitor.International.Book.Api.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/ernestmthunya/Euromonitor.International.Book.Api/Euromonitor.International.Book.Api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

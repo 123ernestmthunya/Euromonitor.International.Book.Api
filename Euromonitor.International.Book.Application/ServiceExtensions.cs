@@ -11,5 +11,6 @@ public static class ServiceExtensions
        services.AddTransient<ISubscriptionService, SubscriptionService>();
        services.AddTransient<IBookService, BookService>();
        return services;   
-   }   
+    }
+    
 }

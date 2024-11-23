@@ -1,5 +1,8 @@
+using System.Text;
 using Euromonitor.International.Book.Application;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,35 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddBookServices();
+builder.Services.AddSingleton<AuthService>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        // TokenValidationParameters is a class that specifies the parameters
+        // that will be used by JwtBearerMiddleware to validate the token in each request.
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            // ValidateIssuer set to true means the issuer will be validated during token validation.
+            ValidateIssuer = true,
+            // ValidateAudience set to true means the audience will be validated during token validation.
+            ValidateAudience = true,
+            // ValidateLifetime set to true means the token expiry will be checked to ensure it's still valid.
+            ValidateLifetime = true,
+            // ValidateIssuerSigningKey set to true means the signing key will be validated to ensure the token's integrity.
+            ValidateIssuerSigningKey = true,
+            // ValidIssuer specifies the issuer to validate. It's taken from the app settings (configuration).
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            // ValidAudience specifies the audience to validate. It's taken from the app settings (configuration).
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            // IssuerSigningKey specifies the key used to sign the token. It needs to match the one used to generate the token.
+            // It is taken from the app settings and must be a key that both the issuer and the API know.
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+// This setup allows the application to authenticate requests based on the configured JwtBearer settings
+// and authorize them based on the configured policies or roles.
+builder.Services.AddAuthorization();
 
 builder.Services.AddCors(options =>
     {
@@ -34,32 +66,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("AllowAngularApp");
-
-// var summaries = new[]
-// {
-//     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-// };
-
-// app.MapGet("/weatherforecast", () =>
-// {
-//     var forecast =  Enumerable.Range(1, 5).Select(index =>
-//         new WeatherForecast
-//         (
-//             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-//             Random.Shared.Next(-20, 55),
-//             summaries[Random.Shared.Next(summaries.Length)]
-//         ))
-//         .ToArray();
-//     return forecast;
-// })
-// .WithName("GetWeatherForecast")
-// .WithOpenApi();
-
 app.MapEndpoints();
 
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
