@@ -49,7 +49,15 @@ public static class EndpointsExtensions
                 ? Results.Ok(new { Success = response.IsSuccess, subscriptions = response.Data })
                 : Results.BadRequest(ApplicationConstants.SubscriptionNotFound);
         }).WithName("cancel-subscription");
+        
 
+        app.MapPost("/password-reset", async (ForgotPasswordRequest request, IUserService userService) =>
+        {
+            var response = await userService.ForgotPasswordAsync(request);
+            return response.IsSuccess
+                ? Results.Ok(new { Success = response.IsSuccess, Message = response.Message})
+                : Results.BadRequest(response.Message);
+        }).WithName("password-reset");
 
         app.MapGet("/books", async (IBookService bookService) =>
         {

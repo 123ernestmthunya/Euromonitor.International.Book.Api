@@ -19,6 +19,31 @@ namespace Euromonitor.International.Book.Application
             _authService = authService;
         }
 
+        public async Task<Response<ForgotPasswordResponse>> ForgotPasswordAsync(ForgotPasswordRequest request)
+        {
+            var user = await _dbContext.Users.Where(user=> user.Email == request.Email).FirstOrDefaultAsync();
+
+            if(user is null)
+            {
+                return new Response<ForgotPasswordResponse>(false, ApplicationConstants.UserNotFound, null);
+            }
+
+            if(request.Password != request.ConfirmPassword)
+            {
+                return new Response<ForgotPasswordResponse>(false, ApplicationConstants.PasswordDoesNotMatch, null);
+            }
+
+            byte[] passwordHash, passwordSalt;
+            Helper.CreatePasswordHash(request.Password, out passwordHash, out passwordSalt);
+
+            user.PasswordHash = passwordHash;
+            user.PasswordHash = passwordHash;
+
+            await _dbContext.SaveChangesAsync();
+
+            return new Response<ForgotPasswordResponse>(true, ApplicationConstants.PasswordResetSuccessful, null);
+        }
+
         public async Task<Response<LoginResponse>> LoginUserAsync(LoginRequest request)
         {
             var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Email == request.Email);

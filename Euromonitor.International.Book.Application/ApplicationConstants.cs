@@ -11,4 +11,7 @@ public static class ApplicationConstants
     public static string SubscriptionNotFound = "Subscriptions not found";
     public static string SubsciptionRetrievedSuccessful = "Subscriptions retrived successful";
     public const string SubscriptionCancelled = "Subscription cancelled successfully.";
+    public static string PasswordDoesNotMatch = "Password does not match";
+
+    public static string PasswordResetSuccessful = "Password reset successfully.";
 }
