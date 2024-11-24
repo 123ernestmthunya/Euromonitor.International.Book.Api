@@ -16,7 +16,7 @@ public class AuthService
             _configuration = configuration;
         }
         // Method to generate a JWT token for a given username
-        public string GenerateJwtToken(string username)
+        public string GenerateJwtToken(string name)
         {
             // Create a new SymmetricSecurityKey using the secret key from configuration.
             // The key is encoded in UTF8 and used for signing the JWT.
@@ -28,7 +28,7 @@ public class AuthService
             // such as the username and a unique identifier for the token.
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, username), // Subject claim with the username
+                new Claim(JwtRegisteredClaimNames.GivenName, name), // Subject claim with the username
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()) // Unique identifier claim with a new GUID
             };
             // Create a new JWT token with the specified issuer, audience, claims, expiration time, and signing credentials

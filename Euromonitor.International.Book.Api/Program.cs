@@ -37,8 +37,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
-// This setup allows the application to authenticate requests based on the configured JwtBearer settings
-// and authorize them based on the configured policies or roles.
+
 builder.Services.AddAuthorization();
 
 builder.Services.AddCors(options =>

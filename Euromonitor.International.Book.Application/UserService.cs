@@ -37,7 +37,7 @@ namespace Euromonitor.International.Book.Application
             Helper.CreatePasswordHash(request.Password, out passwordHash, out passwordSalt);
 
             user.PasswordHash = passwordHash;
-            user.PasswordHash = passwordHash;
+            user.PasswordSalt = passwordSalt;
 
             await _dbContext.SaveChangesAsync();
 
@@ -57,7 +57,8 @@ namespace Euromonitor.International.Book.Application
 
             var response = new LoginResponse {
                 Token = token,
-                Email = user.Email
+                Email = user.Email,
+                UserId = user.UserID
             };
            
              return new Response<LoginResponse>(true, ApplicationConstants.LoginSuccessful, response);

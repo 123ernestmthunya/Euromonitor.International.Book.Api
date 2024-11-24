@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Euromonitor.International.Book.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09bc03a514c12312f039f64d51f62347bf3e4401")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3606eb97cbebf225b72905e5deab049bbdfdc3fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Euromonitor.International.Book.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Euromonitor.International.Book.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
