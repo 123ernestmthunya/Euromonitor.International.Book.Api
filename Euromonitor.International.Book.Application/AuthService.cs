@@ -7,39 +7,26 @@ namespace Euromonitor.International.Book.Application;
 
 public class AuthService
 {
-    // Declare a private readonly field for the IConfiguration dependency
-        private readonly IConfiguration _configuration; 
-        // Constructor for the AuthService class that accepts an IConfiguration parameter
-        public AuthService(IConfiguration configuration)
+    private readonly IConfiguration _configuration; 
+    public AuthService(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+    public string GenerateJwtToken(string name)
+    {
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+        var claims = new[]
         {
-            // Initialize the _configuration field with the provided IConfiguration instance
-            _configuration = configuration;
-        }
-        // Method to generate a JWT token for a given username
-        public string GenerateJwtToken(string name)
-        {
-            // Create a new SymmetricSecurityKey using the secret key from configuration.
-            // The key is encoded in UTF8 and used for signing the JWT.
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            // Create signing credentials using the security key and the HMAC-SHA256 algorithm
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            // Define the claims to be included in the JWT.
-            // Claims are name/value pairs that assert information about the subject,
-            // such as the username and a unique identifier for the token.
-            var claims = new[]
-            {
-                new Claim(JwtRegisteredClaimNames.GivenName, name), // Subject claim with the username
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()) // Unique identifier claim with a new GUID
-            };
-            // Create a new JWT token with the specified issuer, audience, claims, expiration time, and signing credentials
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"], // 'Issuer' - the party generating the token
-                audience: _configuration["Jwt:Audience"], // 'Audience' - the intended recipient of the token
-                claims: claims, // Claims contained within the JWT
-                expires: DateTime.Now.AddHours(1), // Set the expiration time of the token (1 hour from the current time)
-                signingCredentials: credentials); // Credentials used to sign the token, ensuring its validity
-            // Serialize the token to a string and return it
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+            new Claim(JwtRegisteredClaimNames.GivenName, name),
+        };
+        var token = new JwtSecurityToken(
+            issuer: _configuration["Jwt:Issuer"],
+            audience: _configuration["Jwt:Audience"],
+            claims: claims, 
+            expires: DateTime.Now.AddHours(1), 
+            signingCredentials: credentials); 
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
 
 }
